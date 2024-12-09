@@ -7,6 +7,7 @@ import { Burger, Menu } from './components';
 import FocusLock from 'react-focus-lock';
 import DatabaseDemo from './components/DatabaseDemo/DatabaseDemo'
 import Home from './components/Home/Home'
+import TestEnv from './components/TestEnv' // Import the TestEnv component
 import {
   HashRouter as Router,
   Switch,
@@ -27,6 +28,7 @@ function App() {
         <div ref={node}>
           <FocusLock disabled={!open}>
             <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
+            <TestEnv /> {/* Render the TestEnv component */}
             <Router>
               <div>
             <Menu open={open} setOpen={setOpen} id={menuId} />
@@ -34,6 +36,7 @@ function App() {
           <Route path="/db">
             <DatabaseDemo />
           </Route>
+          <Route path="/test-env" element={<TestEnv />} /> 
           <Route path="/">
             <Home/>
           </Route>
