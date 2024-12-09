@@ -4,6 +4,8 @@
 /node_modules
 /application-code/app-tier/node_modules
 /application-code/web-tier/node_modules
+/application-code/app-tier/node_modules/*
+/application-code/web-tier/node_modules/*
 /.pnp
 .pnp.js
 
